@@ -2,7 +2,5 @@
     <h1>SuperPowers!</h1>
     <h2>List of superpower</h2>
     <% @superpowers.each do |superpower| %>
-      <%= link_to superpower_path(superpower) do %>
             <h3><%= superpower.name%></h3>
-      <%end%>
     <%end%>
