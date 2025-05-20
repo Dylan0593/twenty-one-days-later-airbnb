@@ -1,0 +1,16 @@
+
+
+
+
+<h1>Book this Superpower</h1>
+
+<%= simple_form_for [@superpower, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :comment, as: :text %>
+  <%= f.submit "Book Superpower", class: "btn btn-primary" %>
+<% end %>
+
+
+
+<%# <%= link_to "back", cars_path %> %>
