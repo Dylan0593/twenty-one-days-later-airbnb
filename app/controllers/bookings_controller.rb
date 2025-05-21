@@ -7,15 +7,25 @@ class BookingsController < ApplicationController
       @booking.superpower = superpower
       @booking.user = current_user
 
-    if @booking.save
-      redirect_to superpower_path(@booking)
+    if @booking.save!
+      redirect_to bookings_path, notice: "you have successfully booked a superpower"
     else
-      render :new, status: :unprocessable_entity
+      render "superpowers/show", status: :unprocessable_entity
     end
 
   end
 
 
+  def index
+    @bookings = Booking.where(user: current_user)
+  end
+
+
+   def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path
+   end
 
 
 private
