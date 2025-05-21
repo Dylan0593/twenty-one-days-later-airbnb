@@ -1,12 +1,21 @@
 
 <h1>Book this Superpower</h1>
 
+<div class="cards">
+  <div class="card-trip">
+    <div class="card-trip-description">
+      <h3><%= @superpower.name %></h3>
+      <p><%= @superpower.description.truncate(100) %></p>
+      <p><%= @superpower.price %></p>
+      <p><%= @superpower.strength %></p>
+    </div>
+  </div>
+</div>
+
+
 <%= simple_form_for [@superpower, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.input :comment, as: :text %>
   <%= f.submit "Book Superpower", class: "btn btn-primary" %>
 <% end %>
-
-
-
