@@ -1,7 +1,7 @@
 class SuperpowersController < ApplicationController
 
   def index
-    @superpower = Superpower.all
+    @superpowers = Superpower.all
   end
 
   def show
