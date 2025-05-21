@@ -1,12 +1,12 @@
 class SuperpowersController < ApplicationController
 
   def index
-    @superpowers = Superpower.all
+    @superpower = Superpower.all
   end
 
   def show
       @superpower = Superpower.find(params[:id])
       @booking= Booking.new
   end
-  
+
 end
