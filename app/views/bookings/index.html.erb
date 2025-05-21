@@ -1,6 +1,9 @@
+<div class="superpowers-container">
+
 <h1>Your Bookings</h1>
 
 <% @bookings.each do |booking| %>
+<div class="superpower-card">
   <div class="booking">
     <p><strong>Superpower:</strong> <%= booking.superpower.name %></p>
     <p><strong>Start Date:</strong> <%= booking.start_date %></p>
@@ -8,4 +11,7 @@
     <p><strong>Comment:</strong> <%= booking.comment %></p>
   </div>
   <hr>
+  </div>
+
 <% end %>
+</div>
