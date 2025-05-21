@@ -1,17 +1,24 @@
 
 <h1>Book this Superpower</h1>
 
+
 <div class="cards">
   <div class="card-trip">
     <div class="card-trip-description">
       <h3><%= @superpower.name %></h3>
-      <p><%= @superpower.description.truncate(100) %></p>
-      <p><%= @superpower.price %></p>
-      <p><%= @superpower.strength %></p>
+      <br>
+      <p><strong>Description:</strong>
+      <br>
+      <em><%= @superpower.description.truncate(100) %></em></p>
+      <br>
+      <p><strong>Price(£)</strong> <%= @superpower.price.round %></p>
+      <br>
+      <p><strong>Strength:</strong> <%= @superpower.strength %></p>
     </div>
   </div>
 </div>
 
+<%= link_to "Back", superpowers_path %>
 
 <%= simple_form_for [@superpower, @booking] do |f| %>
   <%= f.input :start_date %>
