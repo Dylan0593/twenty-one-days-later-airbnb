@@ -11,7 +11,15 @@
     <p><strong>Comment:</strong> <%= booking.comment %></p>
   </div>
   <hr>
+
   </div>
 
 <% end %>
 </div>
+
+  <%= link_to "Delete Booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+<% end %>
+
+
+<%= link_to "Back", superpowers_path %>
+
