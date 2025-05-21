@@ -1,0 +1,13 @@
+.button-container {
+  display: flex;
+  justify-content: center;  // horizontally center
+  align-items: center;      // vertically center (optional)
+  height: 100px;
+}
+
+.btn-flat {
+  color: rgb(255, 255, 255);
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: rgb(20, 148, 106);
+}

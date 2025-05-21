@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('<%= image_path("superpowers.jpg") %>')">
+  <div>
+  <div class="container">
+    <h1><strong>Powershare</strong></h1>
+    <p>rent superpowers on demand</p>
+    <div class="button-container">
+    <%= link_to 'Enter', superpowers_path, class: "btn btn-flat" %>
+  </div>
+</div>
