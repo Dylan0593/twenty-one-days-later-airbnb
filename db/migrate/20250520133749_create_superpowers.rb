@@ -3,7 +3,7 @@ class CreateSuperpowers < ActiveRecord::Migration[7.2]
     create_table :superpowers do |t|
       t.string :name
       t.text :description
-      t.integer :strength
+      t.string :strength
       t.float :price
       t.references :user, null: false, foreign_key: true
 

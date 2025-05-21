@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
 
 resources :superpowers do
-  resources :bookings, only: [:new, :create]
+  resources :bookings, only: [:new, :create, :index]
 end
 
 end
