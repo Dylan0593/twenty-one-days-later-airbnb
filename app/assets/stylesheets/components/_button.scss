@@ -1,16 +1,30 @@
-.btn-flat {
-    color: rgb(255, 255, 255);
-    padding: 20px 80px;
-    border-radius: 40px;
-    background: #0DA5FF;
+.btn-flat1 {
+    display: inline-block;
+    padding: 22px 50px;
+    border-radius: 45px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
     letter-spacing: 4px;
-    font-size: 48px;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    background: rgb(65, 176, 228);
+    text-shadow: 0 0 5px rgba(72, 72, 72, 0.8); 
+    margin-bottom: 70px;
+}
+
+.btn-flat1:hover {
+  background: rgb(65, 176, 228); 
+  box-shadow: 0 0 10px rgba(91, 192, 235, 0.7), 0 0 20px rgba(91, 192, 235, 0.4); /* キラキラ効果 */
+  transform: translateY(-2px); 
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); 
+  color:#e6e6e6;
 }
 
 .button-container {
   display: flex;
-  justify-content: center;  // horizontally center
-  align-items: center;      // vertically center (optional)
+  justify-content: center;  
+  align-items: center;    
   height: 100px;
 }
 

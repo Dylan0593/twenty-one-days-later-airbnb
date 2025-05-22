@@ -1,13 +1,13 @@
 .features {
-  padding: 50px 0;
+  padding: 100px 0;
    font-family: "Bangers", system-ui;
 }
 
 .feature-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+        justify-content: center;
 }
 
 .container{
@@ -16,6 +16,7 @@
 .feature-text,
 .feature-image {
   width: 48%;
+  
 }
 
 .feature-text h2 {
@@ -27,6 +28,16 @@
 }
 
 .feature-image {
-  height: 300px;
-  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-image img {
+  width: 80%; 
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  max-height: 250px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
