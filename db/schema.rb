@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema[7.2].define(version: 2025_05_22_144345) do
-
 ActiveRecord::Schema[7.2].define(version: 2025_05_22_110548) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,7 +57,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_05_22_110548) do
   create_table "superpowers", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "strength"
+    t.string "strength"
     t.float "price"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
