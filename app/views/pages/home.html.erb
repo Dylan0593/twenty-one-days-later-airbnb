@@ -1,9 +1,91 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<body>
+<section class= "FV">
 <div class="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('<%= image_path("superpowers.jpg") %>')">
   <div>
   <div class="container">
-    <h1><strong>Powershare</strong></h1>
-    <p>rent superpowers on demand</p>
-    <div class="button-container">
+    <%# <h1><strong>Powershare</strong></h1>
+    <p>rent superpowers on demand</p> %>
+    <%# <div class="button-container"> %>
     <%= link_to 'Enter', superpowers_path, class: "btn btn-flat" %>
   </div>
-</div>
+<%# </div> %>
+</section>
+
+
+<section class="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-text left">
+                    <h2>NEED A HERO?<br>BECOME ONE.<br>RENT A POWER.</h2>
+                </div>
+                <div class="feature-image right">
+                <%= image_tag "test.png", alt: "test" %>
+                </div>
+            </div>
+
+            <div class="feature-grid reverse">
+                <div class="feature-image left">
+                  <%= image_tag "test.png", alt: "test" %>
+                </div>
+                <div class="feature-text right">
+                    <h2>NEED A HERO?<br>BECOME ONE.<br>RENT A POWER.</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ <section class="reviews">
+        <div class="container">
+            <div class="reviews-grid">
+                <div class="reviews">
+                    <p>"My kids LOVED it.<br>Next time: invisibility!"<br>— Sarah, Mom of Two</p>
+                </div>
+                <div class="reviews">
+                    <p>"My kids LOVED it.<br>Next time: invisibility!"<br>— Sarah, Mom of Two</p>
+                </div>
+                <div class="reviews">
+                    <p>"My kids LOVED it.<br>Next time: invisibility!"<br>— Sarah, Mom of Two</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section class="powers">
+        <div class="container">
+            <h2 class="section-title">SUPER POWERS</h2>
+            <div class="powers-grid">
+                <div class="power-card">
+                <%= image_tag "test.png", alt: "test" %>
+                </div>
+                <div class="power-card">
+                <%= image_tag "test.png", alt: "test" %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Rent super powers!</p>
+        </div>
+    </footer>
+    </body>
