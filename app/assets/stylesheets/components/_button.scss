@@ -13,3 +13,50 @@
     letter-spacing: 4px;
     font-size: 48px;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;  // horizontally center
+  align-items: center;      // vertically center (optional)
+  height: 100px;
+}
+
+.btn-flat {
+  color: rgb(255, 255, 255);
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: rgb(20, 148, 106);
+}
+
+.create-superpower-btn {
+  background-color: #017BC4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border:none;
+}
+
+.create-superpower-btn:hover,
+ .create-superpower-btn:active {
+  background-color: #FE670A;
+  color:white;
+  box-shadow: 0px 0px 15px rgba(1, 123, 196, 0.8); /* Blue glow */
+}
+
+
+.glowing-btn {
+  background-color: #017BC4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+
+}
+.glowing-btn:hover,
+.glowing-btn:active {
+  background-color: #1B2364; /* Stay darker on hover */
+  box-shadow: 0px 0px 15px rgba(255, 46, 0, 0.8); /* Glowing light effect */
+}

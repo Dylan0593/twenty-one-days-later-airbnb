@@ -6,9 +6,18 @@
 
     <% @superpowers.each do |superpower| %>
      <div class="card">
+        <% if superpower.image.attached? %>
+          <%= image_tag superpower.image, class: "superpower-image" %>
+        <% end %>
 
-            <h3><%= link_to superpower.name, superpower_path(superpower)%></h3>
+       <h3><%= link_to superpower.name, superpower_path(superpower)%></h3>
+        <% if superpower.user == current_user %>
+          <%= link_to "Delete", superpower_path(superpower), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+        <% end %>
     </div>
     <%end%>
 </div>
+</div>
+<hr>
+  <%= link_to "Add a New Superpower", new_superpower_path, class: "glowing-btn" %>
 </div>
