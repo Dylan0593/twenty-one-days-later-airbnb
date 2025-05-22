@@ -7,72 +7,48 @@
         <%= image_tag "test.png", alt: "test", class: "superpower_image" %>
       </div>
       <div class="booking_info">
-        <p class="booking_detail">Superpower:<%= booking.superpower.name %></p>
-        <p class="booking_detail">Start Date:<%= booking.start_date %></p>
-        <p class="booking_detail">End Date:<%= booking.end_date %></p>
-        <p class="booking_detail">Comment:<%= booking.comment %></p>
-        <p class="booking_detail">Total Price:£<%= booking.total_price %></p>
-        <%= link_to "Delete Booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+        <p class="booking_detail">Superpower: &nbsp;<%= booking.superpower.name %></p>
+        <p class="booking_detail">Start Date: &nbsp;<%= booking.start_date %></p>
+        <p class="booking_detail">End Date: &nbsp;<%= booking.end_date %></p>
+        <p class="booking_detail">Comment: &nbsp;<%= booking.comment %></p>
+        <p class="booking_detail">Total Price: &nbsp;£<%= booking.total_price %></p>
+
+        <%= link_to "Delete Booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#reviewModal-<%= booking.id %>">
+          Leave a Review
+        </button>
       </div>
     </div>
-  <% end %>
-</div>
 
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  leave a review
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-       <div class="review-form">
-        <%= simple_form_for [booking.superpower,@review] do |f| %>
-          <%= f.input :comment, label_html: {class: "d-none"}, placeholder: "review here....", class: "review" %>
-          <%= f.input :rating, collection: 0..5 %>
-          <%= f.submit "Send", class: "btn btn-primary" %>
-        <% end %>
+    <!-- Modal (unique ID per booking) -->
+    <div class="modal fade" id="reviewModal-<%= booking.id %>" tabindex="-1" aria-labelledby="modalLabel-<%= booking.id %>" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalLabel-<%= booking.id %>">Leave a Review</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="review-form">
+              <%= simple_form_for [booking.superpower, Review.new] do |f| %>
+                <%= f.input :comment, label_html: { class: "d-none" }, placeholder: "Review here...", class: "review" %>
+                <%= f.input :rating, collection: 0..5 %>
+                <%= f.submit "Send", class: "btn btn-primary" %>
+              <% end %>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
-  </div>
+
+  <% end %> 
 </div>
 
-
-
-
-
-
-  <%= link_to "Delete Booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
-<% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-<%= link_to "Back", superpowers_path, class: "d-block" %>
-
-<div class="back-link">
+<div class="back-link mt-4">
   <%= link_to "Back", superpowers_path, class: "btn btn-primary" %>
 </div>
-
