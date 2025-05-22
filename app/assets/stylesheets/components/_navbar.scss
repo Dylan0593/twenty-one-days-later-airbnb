@@ -3,20 +3,26 @@
   background: #011545;
   padding: 10px 20px 5px 20px;
 }
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
+
 ul.navbar-nav {
-    gap: 10px;
+  gap: 10px;
 }
+
 .nav-link {
-  color:#ffffff
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
 }
+
+
+.nav-link:hover {
+  color: orange !important;
+}
+
 .navbar-lewagon .navbar-brand img {
   width: 40px;
-}
-.nav-link:hover {
-  color: orange;
-  color: white !important;
-  transition: background-color 0.3s, color 0.3s;
 }
