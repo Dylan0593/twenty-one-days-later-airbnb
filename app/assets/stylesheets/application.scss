@@ -10,3 +10,22 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+
+body {
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-color: grey;
+  color: rgb(237,187,73);
+
+
+}
+.bangers-regular {
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+}

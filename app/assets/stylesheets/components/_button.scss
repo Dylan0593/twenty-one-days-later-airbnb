@@ -8,6 +8,18 @@
 .btn-flat {
   color: rgb(255, 255, 255);
   padding: 8px 24px;
-  border-radius: 4px;
-  background: rgb(20, 148, 106);
+  border-radius: 100px;
+  background: rgba(103,36,30,1);
+  font-size: 50px;
+  transition: 0.3s ease;
+  border: 2px solid black
+
+
+
+}
+
+.btn-flat:hover {
+  background: #14410e;
+  color: white;
+  box-shadow: 0 0 20px 10px lightblue;
 }

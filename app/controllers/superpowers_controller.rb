@@ -9,4 +9,5 @@ class SuperpowersController < ApplicationController
       @booking= Booking.new
   end
 
+
 end
