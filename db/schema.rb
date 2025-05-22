@@ -68,7 +68,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_05_22_144650) do
   create_table "superpowers", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "strength"
+    t.integer "strength"
     t.float "price"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
