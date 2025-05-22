@@ -7,7 +7,10 @@
     <% @superpowers.each do |superpower| %>
      <div class="card">
 
-            <h3><%= link_to superpower.name, superpower_path(superpower)%></h3>
+            <%= link_to  superpower_path(superpower) do %>
+            <%= cl_image_tag superpower.photo.key, height: 300, width: 200, crop: :fill, alt: superpower.name %>
+            <% end %>
+
     </div>
     <%end%>
 </div>
