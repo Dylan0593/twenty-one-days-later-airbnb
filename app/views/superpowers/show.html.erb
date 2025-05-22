@@ -14,7 +14,21 @@
    <p><strong>Strength:</strong> <%= @superpower.strength %></p>
 </div>
 
-<%= link_to "Back", superpowers_path %>
+
+
+
+
+<ul>
+
+<% @superpower.reviews.each do |review|%>
+
+<li> <%= review.comment  %> <%= '⭐️' * review.rating %></li>
+
+<% end %>
+
+</ul>
+
+
 
 <%= simple_form_for [@superpower, @booking] do |f| %>
   <%= f.input :start_date, as: :string, input_html: { type: 'date' } %>
@@ -51,3 +65,5 @@
     endDateInput.addEventListener("change", updateTotalPrice);
   });
 </script>
+
+<%= link_to "Back", superpowers_path, class: "d-block"%>

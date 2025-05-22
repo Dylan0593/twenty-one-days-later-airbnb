@@ -16,10 +16,11 @@ Rails.application.routes.draw do
   # root "posts#index"
 
 
-resources :superpowers do
-  resources :bookings, only: [:new, :create]
-end
+  resources :superpowers do
+    resources :bookings, only: [:new, :create]
+    resources :reviews, only: [:create]
+  end
 
-resources :bookings, only: [:index, :destroy]
+  resources :bookings, only: [:index, :destroy]
 
 end
