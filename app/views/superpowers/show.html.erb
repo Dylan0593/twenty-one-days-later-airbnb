@@ -30,6 +30,14 @@
 
 
 
+
+
+
+
+<%= render partial: "bookings/form_frame", locals: { booking: @booking, superpower: @superpower } %>
+
+
+
 <%= simple_form_for [@superpower, @booking] do |f| %>
   <%= f.input :start_date, as: :string, input_html: { type: 'date' } %>
   <%= f.input :end_date, as: :string, input_html: { type: 'date' } %>
@@ -37,6 +45,7 @@
   <p><strong>Total Price:</strong> <span id="total-price">0</span></p>
   <%= f.submit "Book Superpower", class: "glowing-btn" %>
 <% end %>
+
 </div>
 
 <script>
