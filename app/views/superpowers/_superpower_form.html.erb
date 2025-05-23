@@ -4,7 +4,7 @@
     <%= f.input :description, label: 'Description' %>
     <%= f.input :price, label: 'Price' %>
     <%= f.input :strength, label: 'Strength Level' %>
-    <%= f.input :image, as: :file, label: "Upload Image" %>
+    <%= f.input :photo, as: :file, label: "Upload Image", class: "superpower-image" %>
     <%= f.button :submit, class: 'create-superpower-btn' %>
   <% end %>
 </div>
