@@ -2,7 +2,7 @@
 
 <div class="booking_container">
   <% @bookings.each do |booking| %>
-    <div class="booking_box">
+    <div class="mybooking_box">
       <div class="booking_image">
         <%= image_tag "test.png", alt: "test", class: "superpower_image" %>
       </div>
@@ -35,12 +35,14 @@
               <%= simple_form_for [booking.superpower, Review.new] do |f| %>
                 <%= f.input :comment, label_html: { class: "d-none" }, placeholder: "Review here...", class: "review" %>
                 <%= f.input :rating, collection: 0..5 %>
-                <%= f.submit "Send", class: "btn btn-primary" %>
+              <div class="text-end">
+  <%= f.submit "Send", class: "btn btn-primary" %>
+</div>
               <% end %>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <%# <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> %>
           </div>
         </div>
       </div>
