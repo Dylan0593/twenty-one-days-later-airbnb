@@ -35,7 +35,7 @@
   <%= f.input :end_date, as: :string, input_html: { type: 'date' } %>
   <%= f.input :comment, as: :text %>
   <p><strong>Total Price:</strong> <span id="total-price">0</span></p>
-  <%= f.submit "Book Superpower", class: "btn btn-primary" %>
+  <%= f.submit "Book Superpower", class: "glowing-btn" %>
 <% end %>
 </div>
 
@@ -66,5 +66,3 @@
     endDateInput.addEventListener("change", updateTotalPrice);
   });
 </script>
-
-<%= link_to "Back", superpowers_path, class: "d-block"%>
