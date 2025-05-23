@@ -1,10 +1,3 @@
-<%= simple_form_for [superpower, booking], html: { data: { turbo_frame: "booking_form" } } do |f| %>
-  <%= f.input :start_date, as: :string, input_html: { type: 'date' } %>
-  <%= f.input :end_date, as: :string, input_html: { type: 'date' } %>
-  <%= f.input :comment, as: :text %>
-  <p><strong>Total Price:</strong> <span id="total-price">0</span></p>
-  <%= f.submit "Book Superpower", class: "btn btn-primary" %>
-<% end %>
 
 
 
