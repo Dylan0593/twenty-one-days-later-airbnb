@@ -5,10 +5,11 @@ class BookingsController < ApplicationController
     @booking.superpower = superpower
     @booking.user = current_user
 
-    if @booking.save!
+    if @booking.save
       redirect_to bookings_path, notice: "you have successfully booked a superpower"
     else
-      render "superpowers/show", status: :unprocessable_entity
+
+      render partial: "bookings/form_frame", status: :unprocessable_entity, locals: { booking: @booking, superpower: @superpower }
     end
   end
 
