@@ -1,42 +1,40 @@
-<div class="booking-page">
 <h1>Book this Superpower</h1>
-<div class='superpower-form-container'>
+<div class="two-column-layout">
+  <div class="left-container" style="color: black !important;">
+    <!-- <h1>Book this Superpower</h1>
+      <div class='superpower-form-container'>-->
 
-   <h3><%= @superpower.name %></h3>
-   <br>
-   <p><strong>Description</strong>
+        <h3><%= @superpower.name %></h3>
+    <br>
+    <p><strong>Description</strong>
       <br>
       <em><%= @superpower.description.truncate(100) %></em>
-   </p>
-   <br>
-   <p><strong>Price - </strong> <%= @superpower.price.round %></p>
-   <br>
-   <p><strong>Strength - </strong> <%= @superpower.strength %></p>
+    </p>
+    <br>
+    <p><strong>Price - </strong> <%= @superpower.price.round %></p>
+    <br>
+    <p><strong>Strength - </strong> <%= @superpower.strength %></p>
 
-
-
-
-
-
-<ul>
-
-<% @superpower.reviews.each do |review|%>
-
-<li> <%= review.comment  %> <%= '⭐️' * review.rating %></li>
-
-<% end %>
-
+  <ul>
+  <% @superpower.reviews.each do |review| %>
+    <li>
+      <button type="button" class="review-btn">
+        <%= review.comment %> <%= '⭐️' * review.rating %>
+      </button>
+    </li>
+  <% end %>
 </ul>
+</div>
 
-
-
-<%= simple_form_for [@superpower, @booking] do |f| %>
-  <%= f.input :start_date, as: :string, input_html: { type: 'date' } %>
-  <%= f.input :end_date, as: :string, input_html: { type: 'date' } %>
-  <%= f.input :comment, as: :text %>
-  <p><strong>Total Price:</strong> <span id="total-price">0</span></p>
-  <%= f.submit "Book Superpower", class: "btn btn-primary" %>
-<% end %>
+  <div class="right-container">
+    <%= simple_form_for [@superpower, @booking] do |f| %>
+      <%= f.input :start_date, as: :string, input_html: { type: 'date' } %>
+      <%= f.input :end_date, as: :string, input_html: { type: 'date' } %>
+      <%= f.input :comment, as: :text %>
+      <p><strong>Total Price:</strong> <span id="total-price">0</span></p>
+      <%= f.submit "Book Superpower", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
 
 <script>
