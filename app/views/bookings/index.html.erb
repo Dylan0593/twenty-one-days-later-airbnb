@@ -4,7 +4,11 @@
   <% @bookings.each do |booking| %>
     <div class="mybooking_box">
       <div class="booking_image">
-        <%= image_tag "test.png", alt: "test", class: "superpower_image" %>
+        <% if booking.superpower.photo.present? %>
+          <%= cl_image_tag booking.superpower.photo.key, height: 300, width: 200, crop: :fill, alt: booking.superpower.name, class: "superpower-image" %>
+        <% else %>
+          <p>No image available</p>
+        <% end %>
       </div>
       <div class="booking_info">
         <p class="booking_detail">Superpower: &nbsp;<%= booking.superpower.name %></p>
@@ -48,7 +52,7 @@
       </div>
     </div>
 
-  <% end %> 
+  <% end %>
 </div>
 
 <div class="back-link mt-4">

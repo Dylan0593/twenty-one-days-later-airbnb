@@ -52,18 +52,21 @@
     </section>
 
   <section class="powers">
-        <div class="container">
-            <h2 class="section-title">SUPER POWERS</h2>
-            <div class="powers-grid">
-                <div class="power-card">
-                <%= image_tag "test.png", alt: "test" %>
-                </div>
-                <div class="power-card">
-                <%= image_tag "test.png", alt: "test" %>
-                </div>
-            </div>
+  <div class="container">
+    <h2 class="section-title">SUPER POWERS</h2>
+    <div class="powers-grid">
+      <% @superpowers.each do |superpower| %>
+        <div class="power-card">
+          <% if superpower.photo.present? %>
+            <%= cl_image_tag superpower.photo.key, height: 200, width: 180, crop: :fit, alt: superpower.name, class: "superpower-image" %>
+          <% else %>
+            <p>No image available</p>
+          <% end %>
         </div>
-    </section>
+      <% end %>
+    </div>
+  </div>
+</section>
 
-     
+
     </body>
