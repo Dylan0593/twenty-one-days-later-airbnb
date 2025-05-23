@@ -1,18 +1,18 @@
 
 <h1>Book this Superpower</h1>
+<div class='superpower-form-container'>
 
-<div class="card-product">
    <h3><%= @superpower.name %></h3>
    <br>
-   <p><strong>Description:</strong>
+   <p><strong>Description</strong>
       <br>
       <em><%= @superpower.description.truncate(100) %></em>
    </p>
    <br>
-   <p><strong>Price(£)</strong> <%= @superpower.price.round %></p>
+   <p><strong>Price - </strong> <%= @superpower.price.round %></p>
    <br>
-   <p><strong>Strength:</strong> <%= @superpower.strength %></p>
-</div>
+   <p><strong>Strength - </strong> <%= @superpower.strength %></p>
+
 
 
 
@@ -34,9 +34,10 @@
   <%= f.input :start_date, as: :string, input_html: { type: 'date' } %>
   <%= f.input :end_date, as: :string, input_html: { type: 'date' } %>
   <%= f.input :comment, as: :text %>
-  <p><strong>Total Price:</strong> £<span id="total-price">0</span></p>
+  <p><strong>Total Price:</strong> <span id="total-price">0</span></p>
   <%= f.submit "Book Superpower", class: "btn btn-primary" %>
 <% end %>
+</div>
 
 <script>
   document.addEventListener("turbo:load", function () {

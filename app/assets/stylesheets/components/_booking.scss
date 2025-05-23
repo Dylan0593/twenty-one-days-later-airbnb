@@ -1,7 +1,14 @@
-.booking_container {
-  max-width: 900px;
-  margin: 20px auto;
+.superpower-form-container{
+width: 400px ;
+text-align: center;
+margin: auto;
+background-color: rgba(97, 97, 97, 0.6);
+border-radius: 20px;
+padding: 10px;
+box-shadow:0 0 100px #03deed;
+border-style: solid 5px #262626;
 }
+
 
 .booking_box {
  background-color: rgba(255, 255, 255, 0.8);
@@ -9,8 +16,8 @@
   padding: 20px 0;
   margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
 }
 
 .booking_image {
@@ -23,14 +30,14 @@ flex: 0 0 400px;
   width: 100%;
   height: auto;
   border-radius: 8px;
-  object-fit: cover; 
+  object-fit: cover;
 
 }
 
 
 .booking_info {
-  flex: 1; 
-  text-align: center; 
+  flex: 1;
+  text-align: center;
 
 }
 
@@ -88,17 +95,17 @@ h1 {
 
 @media (max-width: 768px) {
   .booking_box {
-    flex-direction: column; 
+    flex-direction: column;
   }
-  
+
   .booking_image {
     flex: 0 0 auto;
     width: 100%;
     margin-right: 0;
     margin-bottom: 15px;
   }
-  
+
   .booking_info {
-    text-align: center; 
+    text-align: center;
   }
 }
