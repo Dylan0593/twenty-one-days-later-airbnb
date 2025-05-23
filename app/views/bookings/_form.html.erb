@@ -1,0 +1,21 @@
+<%= simple_form_for [superpower, booking], html: { data: { turbo_frame: "booking_form" } } do |f| %>
+  <%= f.input :start_date, as: :string, input_html: { type: 'date' } %>
+  <%= f.input :end_date, as: :string, input_html: { type: 'date' } %>
+  <%= f.input :comment, as: :text %>
+  <p><strong>Total Price:</strong> <span id="total-price">0</span></p>
+  <%= f.submit "Book Superpower", class: "btn btn-primary" %>
+<% end %>
+
+
+
+<% if booking.errors.any? %>
+
+  <div class="alert alert-danger">
+    <h4><%= pluralize(booking.errors.count, "error") %> prohibited this superpower from being booked:</h4>
+    <ul>
+      <% booking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
